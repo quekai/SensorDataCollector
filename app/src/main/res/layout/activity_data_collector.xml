@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.quekai.sensordatacollector.DataCollectorActivity">
+    <!--#define SENSOR_TYPE_ACCELEROMETER       1 //加速度-->
+    <!--#define SENSOR_TYPE_MAGNETIC_FIELD      2 //磁力-->
+    <!--#define SENSOR_TYPE_ORIENTATION         3 //方向-->
+    <!--#define SENSOR_TYPE_GYROSCOPE           4 //陀螺仪-->
+    <!--#define SENSOR_TYPE_LIGHT               5 //光线感应-->
+    <!--#define SENSOR_TYPE_PRESSURE            6 //压力-->
+    <!--#define SENSOR_TYPE_TEMPERATURE         7 //温度-->
+    <!--#define SENSOR_TYPE_PROXIMITY           8 //接近-->
+    <!--#define SENSOR_TYPE_GRAVITY             9 //重力-->
+    <!--#define SENSOR_TYPE_LINEAR_ACCELERATION 10//线性加速度-->
+    <!--#define SENSOR_TYPE_ROTATION_VECTOR     11//旋转矢量-->
+    <Button
+        android:id="@+id/collector_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Collector Setting"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/accelerometer_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="加速度： "/>
+
+                <TextView
+                    android:id="@+id/data_accelerometer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="加速度数据"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/magnetic_field_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="磁力： "/>
+
+                <TextView
+                    android:id="@+id/data_magnetic_field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="磁力数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/orientation_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="方向： "/>
+
+                <TextView
+                    android:id="@+id/data_orientation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="方向数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/gyroscope_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="陀螺仪： "/>
+
+                <TextView
+                    android:id="@+id/data_gyroscope"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="陀螺仪数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/light_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="光线： "/>
+
+                <TextView
+                    android:id="@+id/data_light"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="光线数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pressure_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="压力： "/>
+
+                <TextView
+                    android:id="@+id/data_pressure"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="压力数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/temperature_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="温度： "/>
+
+                <TextView
+                    android:id="@+id/data_temperature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="温度数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/proximity_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="接近： "/>
+
+                <TextView
+                    android:id="@+id/data_proximity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="接近数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/gravity_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="重力： "/>
+
+                <TextView
+                    android:id="@+id/data_gravity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="重力数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_acceleration_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="线性加速度： "/>
+
+                <TextView
+                    android:id="@+id/data_linear_acceleration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="线性加速度数据"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rotation_vector_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="旋转矢量： "/>
+
+                <TextView
+                    android:id="@+id/data_rotation_vector"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="旋转矢量数据"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"/>
+
+                <Button
+                    android:id="@+id/pause"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pause"/>
+
+                <Button
+                    android:id="@+id/stop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stop"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

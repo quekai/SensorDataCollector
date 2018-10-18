@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.quekai.sensordatacollector.CollectorSettingActivity">
+    <!--#define SENSOR_TYPE_ACCELEROMETER       1 //加速度-->
+    <!--#define SENSOR_TYPE_MAGNETIC_FIELD      2 //磁力-->
+    <!--#define SENSOR_TYPE_ORIENTATION         3 //方向-->
+    <!--#define SENSOR_TYPE_GYROSCOPE           4 //陀螺仪-->
+    <!--#define SENSOR_TYPE_LIGHT               5 //光线感应-->
+    <!--#define SENSOR_TYPE_PRESSURE            6 //压力-->
+    <!--#define SENSOR_TYPE_TEMPERATURE         7 //温度-->
+    <!--#define SENSOR_TYPE_PROXIMITY           8 //接近-->
+    <!--#define SENSOR_TYPE_GRAVITY             9 //重力-->
+    <!--#define SENSOR_TYPE_LINEAR_ACCELERATION 10//线性加速度-->
+    <!--#define SENSOR_TYPE_ROTATION_VECTOR     11//旋转矢量-->
+
+    <CheckBox
+        android:id="@+id/accelerometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加速度"/>
+    <CheckBox
+        android:id="@+id/magnetic_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="磁力"/>
+
+    <CheckBox
+        android:id="@+id/orientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方向"/>
+
+    <CheckBox
+        android:id="@+id/gyroscope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="陀螺仪"/>
+    <CheckBox
+        android:id="@+id/light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="光线"/>
+    <CheckBox
+        android:id="@+id/pressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="压力"/>
+    <CheckBox
+        android:id="@+id/temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="温度"/>
+    <CheckBox
+        android:id="@+id/proximity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="接近"/>
+    <CheckBox
+        android:id="@+id/gravity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重力"/>
+    <CheckBox
+        android:id="@+id/linear_acceleration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="线性加速度"/>
+    <CheckBox
+        android:id="@+id/rotation_vector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="旋转矢量"/>
+
+    <Button
+        android:id="@+id/save_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Setting"/>
+
+
+
+</LinearLayout>
