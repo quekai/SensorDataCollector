@@ -18,69 +18,139 @@
     <!--#define SENSOR_TYPE_LINEAR_ACCELERATION 10//线性加速度-->
     <!--#define SENSOR_TYPE_ROTATION_VECTOR     11//旋转矢量-->
 
-    <CheckBox
-        android:id="@+id/accelerometer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="加速度"/>
-    <CheckBox
-        android:id="@+id/magnetic_field"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="磁力"/>
 
-    <CheckBox
-        android:id="@+id/orientation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="方向"/>
 
-    <CheckBox
-        android:id="@+id/gyroscope"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="陀螺仪"/>
-    <CheckBox
-        android:id="@+id/light"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="光线"/>
-    <CheckBox
-        android:id="@+id/pressure"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="压力"/>
-    <CheckBox
-        android:id="@+id/temperature"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="温度"/>
-    <CheckBox
-        android:id="@+id/proximity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="接近"/>
-    <CheckBox
-        android:id="@+id/gravity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="重力"/>
-    <CheckBox
-        android:id="@+id/linear_acceleration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="线性加速度"/>
-    <CheckBox
-        android:id="@+id/rotation_vector"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="旋转矢量"/>
 
-    <Button
-        android:id="@+id/save_setting"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save Setting"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/accelerometer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="加速度，   输出数据名称：X方向的加速度,Y方向的加速度,Z方向的加速度，  单位：m/s^2"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/magnetic_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="磁力，  输出数据名称：X轴磁场，Y轴磁场，Z轴磁场，  单位：uT"
+                android:visibility="gone"/>
+
+            <CheckBox
+                android:id="@+id/orientation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="方向，  输出数据名称：azimuth,pitch,roll，  单位：度"
+                android:visibility="gone"/>
+
+            <CheckBox
+                android:id="@+id/gyroscope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="陀螺仪，  输出数据名称：X轴角加速度，Y轴角加速度，Z轴角加速度，  单位：r/s"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="光线，  输出数据名称：亮度，  单位：lux"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="压力，  输出数据名称：压强，  单位：hPa"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="温度，  输出数据名称：温度，  单位：度"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/proximity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="接近，  输出数据名称：距离，  单位："
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/gravity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="重力，  输出数据名称：X方向重力加速度,Y方向重力加速度,Z方向重力加速度，  单位：m/s^2"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/linear_acceleration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="线性加速度，  输出数据名称：X方向的线性加速度,Y方向的线性加速度,Z方向的线性加速度，  单位：m/s^2"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/rotation_vector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="旋转矢量，  输出数据名称：x*sin(theta/2),y*sin(theta/2),z*sin(theta/2)，  单位："
+                android:visibility="gone"/>
+
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/freq_fast"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="0Hz"/>
+
+                <RadioButton
+                    android:id="@+id/freq_game"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="50Hz"/>
+                <RadioButton
+                    android:id="@+id/freq_ui"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="16Hz"/>
+                <RadioButton
+                    android:id="@+id/freq_normal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="5Hz"/>
+
+
+
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/save_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Setting"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
 
 
 

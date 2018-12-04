@@ -4,6 +4,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class SensorListActivity extends AppCompatActivity {
             MSensor sensor = new MSensor(item.getType(),item.getName(),item.getVersion(),item.getVendor(),
                     item.getMaximumRange(),item.getMinDelay(),item.getPower(),item.getResolution());
             sensorList.add(sensor);
+
         }
 
 

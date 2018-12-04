@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quekai.sensordatacollector">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,7 @@
         </activity>
         <activity android:name=".SensorListActivity" />
         <activity android:name=".DataCollectorActivity" />
-        <activity android:name=".CollectorSettingActivity"></activity>
+        <activity android:name=".CollectorSettingActivity" />
     </application>
 
 </manifest>
